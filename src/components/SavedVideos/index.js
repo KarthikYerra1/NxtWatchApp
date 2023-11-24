@@ -21,10 +21,9 @@ const SavedVideos = () => (
   <NxtWatchContext.Consumer>
     {value => {
       const {isDarkMode, savedVideos} = value
-      const bgColor = isDarkMode ? '#0f0f0f' : '#f9f9f9'
 
       const renderVideos = () => (
-        <SavedVideosListContainer bgColor={bgColor} data-testid="savedVideos">
+        <SavedVideosListContainer>
           {savedVideos.map(each => (
             <SavedVideoItem key={each.id} details={each} />
           ))}
@@ -32,7 +31,10 @@ const SavedVideos = () => (
       )
 
       return savedVideos.length !== 0 ? (
-        <SavedVideosContainer bgColor={bgColor}>
+        <SavedVideosContainer
+          data-testid="savedVideos"
+          bgColor={isDarkMode ? '#0f0f0f' : '#f9f9f9'}
+        >
           <SavedVideosHeadingContainer data-testid="banner" dark={isDarkMode}>
             <SavedVideosIconContainer dark={isDarkMode}>
               <ImFire size={25} color="#ff0000" />
@@ -44,16 +46,19 @@ const SavedVideos = () => (
           <RenderContainer>{renderVideos()}</RenderContainer>
         </SavedVideosContainer>
       ) : (
-        <NoVideosContainer bgColor={bgColor}>
+        <NoVideosContainer
+          data-testid="savedVideos"
+          bgColor={isDarkMode ? '#0f0f0f' : '#f9f9f9'}
+        >
           <NoSavedVideosImage
             alt="no saved videos"
-            src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-search-results-img.png"
+            src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-saved-videos-img.png"
           />
           <NoSavedVideosHeading dark={isDarkMode}>
             No saved videos found
           </NoSavedVideosHeading>
           <NoSavedVideosDescription dark={isDarkMode}>
-            Save your videos by clicking a button
+            You can save your videos while watching them
           </NoSavedVideosDescription>
         </NoVideosContainer>
       )

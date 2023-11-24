@@ -150,11 +150,11 @@ export const VideoDescriptionLd = styled.p`
   }
 `
 
-export const VideoDescriptionSd = styled.p`
+export const VideoDescription = styled.p`
   font-size: 12px;
   color: ${props => props.color};
   margin-top: 15px;
   @media screen and (min-width: 768px) {
-    display: none;
+    margin-left: 60px;
   }
 `

@@ -153,10 +153,12 @@ class Home extends Component {
       <NxtWatchContext.Consumer>
         {value => {
           const {isDarkMode} = value
-          const bgColor = isDarkMode ? '#181818' : '#f9f9f9'
 
           return (
-            <HomeContainer bgColor={bgColor}>
+            <HomeContainer
+              data-testid="home"
+              bgColor={isDarkMode ? '#181818' : '#f9f9f9'}
+            >
               <HomeBanner />
               <SearchContainer
                 searchInput={searchInput}
@@ -164,9 +166,7 @@ class Home extends Component {
                 onEnterSearchInput={this.onEnterSearchInput}
                 onClickSearchIcon={this.onClickSearchIcon}
               />
-              <RenderContainer data-testid="Home" bgColor={bgColor}>
-                {this.renderAllVideos()}
-              </RenderContainer>
+              <RenderContainer>{this.renderAllVideos()}</RenderContainer>
             </HomeContainer>
           )
         }}

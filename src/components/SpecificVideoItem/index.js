@@ -22,8 +22,7 @@ import {
   ChannelNameAndDescriptionContainer,
   ChannelName,
   ChannelFollowers,
-  VideoDescriptionLd,
-  VideoDescriptionSd,
+  VideoDescription,
 } from './styledComponents'
 
 const SpecificVideoDetails = props => (
@@ -110,14 +109,11 @@ const SpecificVideoDetails = props => (
               <ChannelFollowers as="p" dark={isDarkMode}>
                 {subscriberCount} subscribers
               </ChannelFollowers>
-              <VideoDescriptionLd color={isDarkMode ? '#ebebeb' : '#424242'}>
-                {description}
-              </VideoDescriptionLd>
             </ChannelNameAndDescriptionContainer>
           </ChannelDetailsContainer>
-          <VideoDescriptionSd color={isDarkMode ? '#ebebeb' : '#424242'}>
+          <VideoDescription color={isDarkMode ? '#ebebeb' : '#424242'}>
             {description}
-          </VideoDescriptionSd>
+          </VideoDescription>
         </SpecificVideoDetailsContainer>
       )
     }}

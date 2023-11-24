@@ -110,10 +110,12 @@ class Trending extends Component {
       <NxtWatchContext.Consumer>
         {value => {
           const {isDarkMode} = value
-          const bgColor = isDarkMode ? '#0f0f0f' : '#f9f9f9'
 
           return (
-            <TrendingContainer data-testid="trending" bgColor={bgColor}>
+            <TrendingContainer
+              data-testid="trending"
+              bgColor={isDarkMode ? '#0f0f0f' : '#f9f9f9'}
+            >
               <TrendingHeadingContainer data-testid="banner" dark={isDarkMode}>
                 <TrendingIconContainer dark={isDarkMode}>
                   <ImFire size={25} color="#ff0000" />

@@ -49,6 +49,7 @@ const SearchContainer = props => (
               data-testid="searchButton"
               dark={isDarkMode}
               onClick={onClickSearchButton}
+              type="button"
             >
               <AiOutlineSearch color="#606060" size={16} />
             </SearchButton>
