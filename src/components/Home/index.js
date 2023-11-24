@@ -14,10 +14,10 @@ import {
   HomeContainer,
   RenderContainer,
   HomeVideosListContainer,
-  NoOrFailureVideosContainer,
-  NoOrFailureVideosImage,
-  NoOrFailureVideosHeading,
-  NoOrFailureVideosDescription,
+  NoVideosContainer,
+  NoVideosImage,
+  NoVideosHeading,
+  NoVideosDescription,
   RetryButton,
 } from './styledComponents'
 
@@ -105,21 +105,21 @@ class Home extends Component {
             ))}
           </HomeVideosListContainer>
         ) : (
-          <NoOrFailureVideosContainer>
-            <NoOrFailureVideosImage
+          <NoVideosContainer>
+            <NoVideosImage
               src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-search-results-img.png"
               alt="no videos"
             />
-            <NoOrFailureVideosHeading dark={isDarkMode}>
+            <NoVideosHeading dark={isDarkMode}>
               No Search results found
-            </NoOrFailureVideosHeading>
-            <NoOrFailureVideosDescription dark={isDarkMode}>
+            </NoVideosHeading>
+            <NoVideosDescription dark={isDarkMode}>
               Try different key words or remove search filter
-            </NoOrFailureVideosDescription>
+            </NoVideosDescription>
             <RetryButton type="button" onClick={this.onClickRetry}>
               Retry
             </RetryButton>
-          </NoOrFailureVideosContainer>
+          </NoVideosContainer>
         )
       }}
     </NxtWatchContext.Consumer>

@@ -35,7 +35,7 @@ export const HomeVideosListContainer = styled.ul`
   overflow-y: auto;
 `
 
-export const NoOrFailureVideosContainer = styled.div`
+export const NoVideosContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,7 +45,7 @@ export const NoOrFailureVideosContainer = styled.div`
   font-family: 'Roboto';
 `
 
-export const NoOrFailureVideosImage = styled.img`
+export const NoVideosImage = styled.img`
   width: 50%;
   margin-top: 30px;
   @media screen and (min-width: 768px) {
@@ -54,7 +54,7 @@ export const NoOrFailureVideosImage = styled.img`
   }
 `
 
-export const NoOrFailureVideosHeading = styled.h2`
+export const NoVideosHeading = styled.h2`
   color: ${props => (props.dark ? '#f4f4f4' : '#0f0f0f')};
   font-size: 16px;
   margin-top: 30px;
@@ -63,7 +63,7 @@ export const NoOrFailureVideosHeading = styled.h2`
   }
 `
 
-export const NoOrFailureVideosDescription = styled.p`
+export const NoVideosDescription = styled.p`
   color: ${props => (props.dark ? '#64748b' : '#909090')};
   font-size: 16px;
   text-align: center;
